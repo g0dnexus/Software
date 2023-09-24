@@ -69,10 +69,10 @@ def play_with_bot():
         print_board()
         
         if current_player == 'X':
-            print(f'Player {current_player}\'s turn / Ходит игрок {current_player}')
+            print(f"Player {current_player}'s turn / Ходит игрок {current_player}")
             make_move(current_player)
         else:
-            print('Bot\'s turn / Ходит бот')
+            print("Bot's turn / Ходит бот")
             bot_move()
         
         if check_winner(current_player):
@@ -85,7 +85,7 @@ def play_with_bot():
         
         if all(board[row][col] != ' ' for row in range(3) for col in range(3)):
             print_board()
-            print('It\'s a tie! / Ничья!')
+            print("It's a tie! / Ничья!")
             break
         
         current_player = 'O' if current_player == 'X' else 'X'
@@ -98,35 +98,35 @@ def play_with_friend():
     while True:
         print_board()
         
-        print(f'Player {current_player}\'s turn / Ходит игрок {current_player}')
+        print(f"Player {current_player}'s turn / Ходит игрок {current_player}")
         make_move(current_player)
         
         if check_winner(current_player):
             print_board()
-            print(f'Player {current_player} has won! / Игрок {current_player} победил! ')
+            print(f"Player {current_player} has won! / Игрок {current_player} победил!")
             break
         
         if all(board[row][col] != ' ' for row in range(3) for col in range(3)):
             print_board()
-            print('It\'s a tie! / Ничья!')
+            print("It's a tie! / Ничья!")
             break
         
         current_player = player2 if current_player == player1 else player1
 
 def choose_game():
     while True:
-        print('Выберите тип игры:')
+        print('Select game type / Выберите тип игры:')
         print('1. Play against the bot / Игра с ботом')
         print('2. Play against a friend / Игра с другом')
         game_type = int(input('Enter the number of the chosen option / Введите номер выбранного варианта: '))
         
         if game_type == 1:
             play_with_bot()
-            break
         elif game_type == 2:
             play_with_friend()
+        
+        play_again = input('Do you want to play another round? (yes/no) / Хотите сыграть ещё раз? (да/нет) ')
+        if play_again.lower() != 'yes' and play_again.lower()!= 'да':
             break
-        else:
-            print('Invalid choice. Try again. / Некорректный выбор. Попробуйте снова.')
-
+            
 choose_game()
