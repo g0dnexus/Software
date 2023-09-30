@@ -1,6 +1,6 @@
 # Repository
 
-This repository contains programs for various devices. The README is available in both English and Russian. Changes will occur in this file for ease of use of the code and they will be marked with numbers.
+This repository contains programs for various devices. The README is available in both English and Russian. 
 
 # Software №1 
 
@@ -32,7 +32,7 @@ The scripts in this repository provide the following information:
 
 # Репозиторий
 
-Этот репозиторий содержит программы для различных устройств. README доступен на английском и русском языках. Изменения будут вноситься в этот файл для удобства использования кода и они будут отмечены числами.
+Этот репозиторий содержит программы для различных устройств. README доступен на английском и русском языках. 
 
 # Программное обеспечение №1
 
